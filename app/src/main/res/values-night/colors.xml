@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand">#8AB4F8</color>
+    <color name="on_brand">#0B1B33</color>
+    <color name="screen_bg">#111318</color>
+    <color name="card_bg">#1C2028</color>
+    <color name="card_stroke">#2B303B</color>
+    <color name="highlight_bg">#3A3117</color>
+    <color name="highlight_accent">#FFC940</color>
+    <color name="highlight_text">#FFC940</color>
+    <color name="text_secondary">#A5ADBB</color>
+</resources>

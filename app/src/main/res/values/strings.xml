@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Alerta PP</string>
+    <string name="channel_name">Promoções</string>
+    <string name="notif_title">Alerta PP • %1$s</string>
+    <string name="keyword_hit">🔔 %1$s</string>
+    <string name="settings">Configurações</string>
+    <string name="hint_url">Endereço do site</string>
+    <string name="hint_interval">Verificar a cada (min)</string>
+    <string name="hint_days">Mostrar últimos (dias)</string>
+    <string name="interval_note">O Android limita o intervalo mínimo a 15 minutos.</string>
+    <string name="keywords_label">Palavras-chave</string>
+    <string name="hint_keyword">Nova palavra-chave</string>
+    <string name="add">Adicionar</string>
+    <string name="save">Salvar e verificar agora</string>
+    <string name="saved">Configurações salvas</string>
+    <string name="status_never">Ainda não verificado…</string>
+    <string name="status_ok">Verificado às %1$s · via %2$s · %3$d matérias</string>
+    <string name="status_error">⚠ Falha ao verificar: %1$s</string>
+    <string name="status_empty">Nenhuma matéria nos últimos %1$d dias. Puxe para atualizar.</string>
+    <string name="no_browser">Nenhum navegador encontrado</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand">#1D5FD1</color>
+    <color name="on_brand">#FFFFFF</color>
+    <color name="screen_bg">#F3F5F9</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="card_stroke">#E1E5EC</color>
+    <color name="highlight_bg">#FFF6DB</color>
+    <color name="highlight_accent">#F5A100</color>
+    <color name="highlight_text">#8A5A00</color>
+    <color name="text_secondary">#5F6877</color>
+    <color name="ic_launcher_background">#1D5FD1</color>
+</resources>
