@@ -18,9 +18,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
-            isShrinkResources = true
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            isMinifyEnabled = false
+            isShrinkResources = false
             // Assina com a chave de debug para o APK ser instalável direto no celular
             signingConfig = signingConfigs.getByName("debug")
         }

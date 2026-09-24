@@ -47,9 +47,11 @@ class MainActivity : AppCompatActivity() {
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        CrashHandler.install(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         prefs = Prefs(this)
+        showLastCrashIfAny()
 
         val list = findViewById<RecyclerView>(R.id.list)
         swipe = findViewById(R.id.swipe)
@@ -208,6 +210,21 @@ class MainActivity : AppCompatActivity() {
         } catch (e: ActivityNotFoundException) {
             Toast.makeText(this, R.string.no_browser, Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun showLastCrashIfAny() {
+        val trace = prefs.lastCrash ?: return
+        prefs.lastCrash = null
+        androidx.appcompat.app.AlertDialog.Builder(this)
+            .setTitle("O app fechou sozinho da última vez")
+            .setMessage(trace)
+            .setPositiveButton("Copiar") { _, _ ->
+                val cm = getSystemService(android.content.ClipboardManager::class.java)
+                cm.setPrimaryClip(android.content.ClipData.newPlainText("erro", trace))
+                Toast.makeText(this, "Copiado. Envie este texto para o suporte.", Toast.LENGTH_LONG).show()
+            }
+            .setNegativeButton("Fechar", null)
+            .show()
     }
 
     private fun requestNotificationPermission() {

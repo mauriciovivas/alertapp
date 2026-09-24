@@ -70,6 +70,10 @@ class Prefs(context: Context) {
         get() = sp.getString("lastSource", null)
         set(v) { sp.edit().putString("lastSource", v).apply() }
 
+    var lastCrash: String?
+        get() = sp.getString("lastCrash", null)
+        set(v) { sp.edit().putString("lastCrash", v).apply() }
+
     companion object {
         const val DEFAULT_URL = "https://passageirodeprimeira.com/categorias/promocoes/"
         val DEFAULT_KEYWORDS = listOf("bônus", "livelo", "smiles", "latam pass", "esfera", "azul")
