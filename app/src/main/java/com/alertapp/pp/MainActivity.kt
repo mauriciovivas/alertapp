@@ -51,13 +51,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         prefs = Prefs(this)
-        showLastCrashIfAny()
 
         val list = findViewById<RecyclerView>(R.id.list)
         swipe = findViewById(R.id.swipe)
+        list.layoutManager = LinearLayoutManager(this)
         header = layoutInflater.inflate(R.layout.header, list, false)
         adapter = ArticleAdapter { openLink(it.link) }
-        list.layoutManager = LinearLayoutManager(this)
         list.adapter = ConcatAdapter(SingleViewAdapter(header), adapter)
 
         bindHeader()
@@ -69,6 +68,7 @@ class MainActivity : AppCompatActivity() {
 
         render()
         refresh(deep = false)
+        list.post { showLastCrashIfAny() }
     }
 
     override fun onResume() {
